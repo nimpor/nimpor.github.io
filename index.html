@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark" data-lt-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Nimpor S2 -  Home </title>
+
+        <!-- Bootstrap -->
+
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+                
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="./Nimpor S2 - Home_files/white.png">
+
+        <!-- Table CSS -->
+        <link rel="stylesheet" href="./Nimpor S2 - Home_files/tablemain.css">
+
+        <!-- jquery -->
+        <script src="./Nimpor S2 - Home_files/jquery-3.7.1.min.js.Download"></script>
+        <script src="./Nimpor S2 - Home_files/jquery-ui.min.js.Download"></script>
+
+        <!-- Multiselect -->
+        <script type="text/javascript" src="./Nimpor S2 - Home_files/bootstrap-multiselect.js.Download"></script>
+        <link rel="stylesheet" href="./Nimpor S2 - Home_files/bootstrap-multiselect.css" type="text/css">
+        <style>::-webkit-scrollbar {
+                width: 12px;
+            }
+            
+            ::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+                border-radius: 10px;
+            }
+            
+            ::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="alert alert-warning my-0 py-1" role="warning">
+            <h5 class="alert-heading d-flex justify-content-center my-1">Die Nimpor Season 2 wurde zum 15.2.2024 beendet.</h5>
+            
+            <p class="justify-content-center d-flex my-0">Diese Seite ist ein Archiv, weiteres findet ihr <a href="https://github.com/nimpor/nimpor.github.io" class="ms-1">hier</a>.</p>
+
+        </div>
+
+        <div class="d-flex flex-column" style="padding-left: 10%; padding-right: 10%; min-height: 100vh;">
+
+        <nav class="navbar navbar-expand-md navbar-light rounded-3 my-4 border">
+            <div class="container-fluid">
+                <a class="navbar-brand mx-auto" href="./index.html">
+                    
+                    <img src="./Nimpor S2 - Home_files/white.png" alt="" width="auto" height="45" class="d-inline-block align-text-top">
+                    
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link border border-secondary rounded-3 mx-1 border-1" href="./index.html" align="center">
+                                Home
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link mx-1" href="./legend.html" align="center">
+                                Legende
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link mx-1" href="./ranking.html" align="center">
+                                Ranking
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link mx-1" href="./playerlist.html" align="center">
+                                Spielerliste
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link mx-1" href="./teams.html" align="center">
+                                Teams
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link mx-1 disabled" href="https://nimpor.eu/map/" align="center" target="_blank">
+                                Map
+                            </a>
+                        </li>
+                        
+
+                    </ul>   
+
+
+                    <span class="navbar-text px-2 navbar-nav">
+                        <a href="https://nimpor.eu/status/" class="btn btn-success px-2 disabled">
+                            Status
+                        </a>
+                    </span>
+                    <span class="navbar-text px-2 navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="./index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-gear-fill"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                
+                                    <li><a class="dropdown-item d-flex justify-content-center" href="https://nimpor.eu/login/">Anmelden</a></li>
+                                    <li><a class="dropdown-item d-flex justify-content-center" href="https://nimpor.eu/register/">Registrieren</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                <li>                       
+                                    <div class="dropdown-item toggle-switch ">
+                                        <a id="toggle" class="mode-button active w-100 h-100 text-decoration-none">
+                                            
+                                            <i class="bi bi-brightness-high-fill d-flex justify-content-center text-body"></i>
+                                            
+                                        </a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </li>
+                    </span>
+                </div>
+            </div>
+        </nav>
+
+
+    <script>
+        const toggleSwitch = document.querySelector('.toggle-switch .mode-button');
+        toggleSwitch.addEventListener('click', function() {
+            let mode = toggleSwitch.classList.contains('active') ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', mode);
+            toggleSwitch.classList.toggle('active');
+            toggleSwitch.textContent = mode.charAt(0).toUpperCase() + mode.slice(1) + ' mode';
+            document.cookie = `mode=${mode}; max-age=31536000; path=/; SameSite=Lax`;
+            location.reload();
+        });
+        
+    </script>
+
+    <div class="my-5">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg" style="--bs-gutter-x: 0rem;">
+          <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+            <h1 class="display-4 fw-bold lh-1 text-body-emphasis text-center">Nimpor Season 2, es geht in die nächste Runde!</h1>
+            <p class="lead text-center">Nimpor, ein Survival Multiplayer Project (SMP), entstand im letzten Jahr spontan aus dem Wunsch heraus, Minecraft in einer größeren Gruppe zu spielen. Von Beginn an war uns bewusst, dass wir so nah wie möglich am Survival-Aspekt bleiben und lediglich Anreize für ein längerfristiges Spiel setzen wollten. Diese Entscheidung war auch während der sechsmonatigen Entwicklungsphase in diesem Jahr unsere oberste Priorität.
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold"><a href="./ranking.html" class="text-decoration-none text-body">Zum Ranking</a></button>
+              
+              <button type="button" class="btn btn-outline-secondary btn-lg px-4 disabled"><a href="https://nimpor.eu/login/" class="text-decoration-none text-body">Login</a></button>
+              
+              <button type="button" class="btn btn-outline-primary btn-lg  px-4"><a href="ts3server://ts.nimpor.eu" class="text-decoration-none text-body"><img src="./Nimpor S2 - Home_files/teamspeak-1.svg" alt="Teamspeak icon" class="pe-2" style="height: 25px; width: auto;">Mit Teamspeak verbinden</a></button>
+            </div>
+          </div>
+          <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden">
+              
+              <img class="rounded-lg-3 img-fluid" src="./Nimpor S2 - Home_files/white.png" alt="" width="auto">
+              
+          </div>
+        </div>
+      </div>
+
+      <div class="p-3 text-center bg-body-tertiary rounded-3">
+        <h2>Regeln</h2>
+        <p class="mx-auto fs-5 text-muted">
+          </p><table class="table">
+            <tbody> 
+                <tr>
+                    <th class="text-nowrap text-center" style="width: 2%;">§1</th>
+                    <td style="width: 96%;">Zerstörung oder Veränderung von Gebäuden, die nicht dir gehören, ist strengstens untersagt.</td>
+                    <td style="width: 2%;"> </td>
+                </tr>
+                
+                <tr>
+                    <th class="text-nowrap text-center" style="width: 2%;">§2</th>
+                    <td style="width: 96%;">Sei respektvoll gegenüber anderen Spielern. Belästigungen, Diskriminierung und unhöfliches Verhalten werden nicht toleriert.</td>
+                    <td style="width: 2%;"> </td>
+                </tr>
+                
+                <tr>
+                    <th class="text-nowrap text-center" style="width: 2%;">§3</th>
+                    <td style="width: 96%;">PvP (Player vs. Player) ist aktiviert, aber beachte die PvP-Regeln des Servers. Unfaire oder ständige Angriffe können bestraft werden.</td>
+                    <td style="width: 2%;"> </td>
+                </tr>
+                
+                <tr>
+                    <th class="text-nowrap text-center" style="width: 2%;">§4</th>
+                    <td style="width: 96%;">Vermeide übermäßige Beanspruchung von Serverressourcen. Automatische Farmen sollten effizient und umweltfreundlich sein.</td>
+                    <td style="width: 2%;"> </td>
+                </tr>
+                
+                <tr>
+                    <th class="text-nowrap text-center" style="width: 2%;">§5</th>
+                    <td style="width: 96%;">Handel ist erlaubt, aber Betrug wird nicht toleriert. Halte dich an die getroffenen Vereinbarungen.</td>
+                    <td style="width: 2%;"> </td>
+                </tr>
+                
+                <tr>
+                    <th class="text-nowrap text-center" style="width: 2%;">§6</th>
+                    <td style="width: 96%;">Den Anweisungen der Hosts und Moderatoren ist Folge zu leisten. Das Personal ist berechtigt, nach eigenem Ermessen über einen temporären oder permanenten Projektausschluss zu entscheiden.</td>
+                    <td style="width: 2%;"> </td>
+                </tr>
+                
+                <tr>
+                    <th class="text-nowrap text-center" style="width: 2%;">§7</th>
+                    <td style="width: 96%;">Gestohlene Items werden nicht ersetzt.</td>
+                    <td style="width: 2%;"> </td>
+                </tr>
+                
+                <tr>
+                    <th class="text-nowrap text-center" style="width: 2%;">§8</th>
+                    <td style="width: 96%;">Die Verwendung von Cheats, Hacks oder Modifikationen, die einen unfairen Vorteil verschaffen, ist verboten.</td>
+                    <td style="width: 2%;"> </td>
+                </tr>
+                
+                <tr>
+                    <th class="text-nowrap text-center" style="width: 2%;">§9</th>
+                    <td style="width: 96%;">Während des Spielens im Teamspeak zu sein ist keine Pflicht, aber gern gesehen.</td>
+                    <td style="width: 2%;"> </td>
+                </tr>
+                
+                <tr>
+                    <th class="text-nowrap text-center" style="width: 2%;">§10</th>
+                    <td style="width: 96%;">Durch Projektteilnahme akzeptierst du die Regeln automatisch.</td>
+                    <td style="width: 2%;"> </td>
+                </tr>
+                
+            </tbody>
+          </table>
+          <p class="fst-italic fw-light text-body-secondary">Zuletzt bearbeitet am: 1. Dezember 2023 15:40 Uhr</p>        
+        <p></p>
+      </div>
+
+    
+    <div class="card text-center mt-5">
+      <div class="card-header">
+        <h2>Login/Registrierungs Hinweis</h2>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Um dein Profil auf der Webseite zu Personalisieren oder andere Features zu benutzen musst du dich registrieren, dafür musst du erst in Minecraft einen Verifizierungscode anfordern, dies tust du mit <b>/verify</b>. Anschließend kannst du entweder direkt auf den Link klicken oder den Code auf der Registrierungsseite eingeben.</p>
+        <a href="https://nimpor.eu/register/" class="btn btn-primary disabled" name="login">Zur Registrierungsseite</a>
+      </div>
+
+    </div>
+    
+    <div class="py-5 col-sm-12" id="icon-grid">
+      <h2 class="pb-2 border-bottom text-center">Verbesserungen</h2>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+        <div class="col d-flex align-items-start">
+          <i class="bi bi-wrench-adjustable me-3 fs-2 text-primary"></i>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Serverstabilität</h3>
+            <p>Eine unserer größten Schwachstellen sollte dieses Jahr durch ein Sponsoring von <a href="https://lockcard.com/" target="_blank">Lockcard</a> kein Problem sein.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <i class="bi bi-map me-3 fs-2 text-primary"></i>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Map V2</h3>
+            <p>Das Feature, welches letztes Jahr am meisten benutzt wurde, haben wir so entscheidend verbessert, dass uns die Worte fehlen.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <i class="bi bi-arrow-left-right me-3 fs-2 text-primary"></i>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Statistiken</h3>
+            <p>Für den digitalen Schw*nzvergleich tracken wir über 1300 Statistiken, welche auf der Website verglichen werden können.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <i class="bi bi-people-fill me-3 fs-2 text-primary"></i>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Gruppen</h3>
+            <p>In Gruppenspielen war nie leichter, hier ist ein neues System entstanden, welches zusammen spielen, auf ein ganz anderes Level bringt.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <i class="bi bi-hourglass-split me-3 fs-2 text-primary"></i>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Spieldauer</h3>
+            <p>Dreimal länger braucht man dieses Jahr für alles, langweilig wird es dank neuem Content troztdem nicht!</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <i class="bi bi-incognito me-3 fs-2 text-primary"></i>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Features</h3>
+            <p>Sieben zusätzliche aktivierbare Vorteile gibt es, Genaueres erfahrt ihr in den nächsten Wochen.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <i class="bi bi-calendar-check me-3 fs-2 text-primary"></i>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Neuste Minecraft Version</h3>
+            <p>Gespielt wird mit dem latest shit, also 1.20.2.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <i class="bi bi-hdd-stack flex-shrink-0 me-3 fs-1 text-primary"></i>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Website</h3>
+            <p>Schöner, besser und mehr Funktionalität hat sie nun.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+                
+
+
+<div class="py-2"></div>
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top mt-auto">
+    <ul class="nav col-md-4">
+        <li class="nav-item">
+            <p class="nav-link text-muted px-0">Nimpor S2, by</p>
+        </li>
+        <li>
+            <a href="https://github.com/Tok3nexe" class="nav-link text-muted px-1" target="_blank">Tok3n</a>
+        </li>
+        <li class="nav-item">
+            <p class="nav-link text-muted px-0">&amp;</p>
+        </li>
+        <li>
+            <a href="https://github.com/K0ney" class="nav-link px-2 text-muted px-1" target="_blank">KoneyMC</a>
+        </li>
+    </ul>
+
+
+    <a href="./index.html" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+        
+        <img class="" src="./Nimpor S2 - Home_files/white(1).png" style="max-width: 25%; height: auto;">
+        
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+        
+            <li class="nav-item">
+                <a href="./index.html" class="nav-link px-2 text-muted">Home</a>
+            </li>
+        
+            <li class="nav-item">
+                <a href="./legend.html" class="nav-link px-2 text-muted">Legende</a>
+            </li>
+        
+            <li class="nav-item">
+                <a href="./ranking.html" class="nav-link px-2 text-muted">Ranking</a>
+            </li>
+        
+            <li class="nav-item">
+                <a href="./playerlist.html" class="nav-link px-2 text-muted">Spielerliste</a>
+            </li>
+        
+            <li class="nav-item">
+                <a href="./teams.html" class="nav-link px-2 text-muted">Teams</a>
+            </li>
+        
+            <li class="nav-item">
+                <a href="https://nimpor.eu/map/" class="nav-link px-2 text-muted disabled" target="_blank">Map</a>
+            </li>
+        
+
+        
+            <li class="nav-item">
+                <a href="https://nimpor.eu/login/" class="nav-link px-2 text-muted disabled">Login</a>
+            </li>
+        
+    </ul>
+</footer>
+
+
+        </div>
+    <script src="./Nimpor S2 - Home_files/bootstrap.bundle.min.js.Download"></script>
+    
+
+</body></html>

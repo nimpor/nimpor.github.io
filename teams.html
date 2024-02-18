@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark" data-lt-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Nimpor S2 - Teams</title>
+
+        <!-- Bootstrap -->
+
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="./Nimpor S2 - Home_files/white.png">
+
+        <!-- Table CSS -->
+        <link rel="stylesheet" href="./Nimpor S2 - Teams_files/tablemain.css">
+
+        <!-- jquery -->
+        <script src="./Nimpor S2 - Teams_files/jquery-3.7.1.min.js.Download"></script>
+        <script src="./Nimpor S2 - Teams_files/jquery-ui.min.js.Download"></script>
+
+        <!-- Multiselect -->
+        <script type="text/javascript" src="./Nimpor S2 - Teams_files/bootstrap-multiselect.js.Download"></script>
+        <link rel="stylesheet" href="./Nimpor S2 - Teams_files/bootstrap-multiselect.css" type="text/css">
+        <style>::-webkit-scrollbar {
+                width: 12px;
+            }
+            
+            ::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+                border-radius: 10px;
+            }
+            
+            ::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="alert alert-warning my-0 py-1" role="warning">
+            <h5 class="alert-heading d-flex justify-content-center my-1">Die Nimpor Season 2 wurde zum 15.2.2024 beendet.</h5>
+            
+            <p class="justify-content-center d-flex my-0">Diese Seite ist ein Archiv, weiteres findet ihr <a href="https://github.com/nimpor/nimpor.github.io" class="ms-1">hier</a>.</p>
+
+        </div>
+
+        <div class="d-flex flex-column" style="padding-left: 10%; padding-right: 10%; min-height: 100vh;">
+
+
+                
+
+
+<nav class="navbar navbar-expand-md navbar-light rounded-3 my-4 border">
+    <div class="container-fluid">
+        <a class="navbar-brand mx-auto" href="./index.html">
+            
+            <img src="./Nimpor S2 - Teams_files/white.png" alt="" width="auto" height="45" class="d-inline-block align-text-top">
+            
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                
+                <li class="nav-item">
+                    <a class="nav-link mx-1" href="./index.html" align="center">
+                        Home
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link mx-1" href="./legend.html" align="center">
+                        Legende
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link mx-1" href="./ranking.html" align="center">
+                        Ranking
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link mx-1" href="./playerlist.html" align="center">
+                        Spielerliste
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link border border-secondary rounded-3 mx-1 border-1" href="./teams.html" align="center">
+                        Teams
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link mx-1 disabled" href="https://nimpor.eu/map/" align="center" target="_blank">
+                        Map
+                    </a>
+                </li>
+                
+
+            </ul>   
+
+
+            <span class="navbar-text px-2 navbar-nav">
+                <a href="https://nimpor.eu/status/" class="btn btn-success px-2 disabled">
+                    Status
+                </a>
+            </span>
+            <span class="navbar-text px-2 navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="./teams.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-gear-fill"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                        
+                            <li><a class="dropdown-item d-flex justify-content-center disabled" href="https://nimpor.eu/login/">Anmelden</a></li>
+                            <li><a class="dropdown-item d-flex justify-content-center disabled" href="https://nimpor.eu/register/">Registrieren</a></li>
+                        
+                        <li><hr class="dropdown-divider"></li>
+                        <li>                       
+                            <div class="dropdown-item toggle-switch ">
+                                <a id="toggle" class="mode-button active w-100 h-100 text-decoration-none" disabled>
+                                    
+                                    <i class="bi bi-brightness-high-fill d-flex justify-content-center text-body"></i>
+                                    
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </li>
+            </span>
+        </div>
+    </div>
+</nav>
+
+
+<script>
+    const toggleSwitch = document.querySelector('.toggle-switch .mode-button');
+    toggleSwitch.addEventListener('click', function() {
+        let mode = toggleSwitch.classList.contains('active') ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', mode);
+        toggleSwitch.classList.toggle('active');
+        toggleSwitch.textContent = mode.charAt(0).toUpperCase() + mode.slice(1) + ' mode';
+        document.cookie = `mode=${mode}; max-age=31536000; path=/; SameSite=Lax`;
+        location.reload();
+    });
+    
+</script>
+
+
+                
+
+
+
+                
+
+
+
+    <div class="row">
+        <div class="pb-4 col-md-4 col-lg-4 col-xl-4">
+            <form class="d-flex justify-content-start" role="search" method="get" action="./teams.html">
+                <input class="form-control me-2" type="search" name="s" placeholder="Nach Team suchen" aria-label="Search" value="">
+                <button class="btn btn-outline-success disabled" type="submit">Suchen</button>
+            </form>
+        </div>
+        <div class="col-md-4 col-lg-4 col-xl-4 d-flex justify-content-center">
+            <!-- <div class="float-end"> -->
+              <h2 class="">Teams</h2>
+            <!-- </div> -->
+          </div>
+        <div class="col-md-4 col-lg-4 col-xl-4">
+
+        </div>
+    </div>
+    
+            <div class="card mb-3" style="border-color: #800080;">
+                <div class="card-body align-self-center text-center">
+                    <h3 class="card-title ">Koney <a href="./Koney" class="mx-2"><i class="bi bi-image" style="color: #800080;"></i></a></h3>
+                    <p class="card-text">Erstellt am: 1. Dezember 2023 20:21</p>
+                </div>
+                <div class="row m-2">
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/fd7635b3-f46a-4798-a968-fd0e438b84d8" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/KoneyMC/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                KoneyMC
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/1476e0f1-5987-4f4d-92b1-1dbdc3479de7" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/Ruffy_and_Ace/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                Ruffy_and_Ace
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/fdb4af34-2927-4c49-9336-8fb4aa119d87" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/n1nma/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                n1nma
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                </div>                
+            </div>
+    
+            <div class="card mb-3" style="border-color: #E51A1A;">
+                <div class="card-body align-self-center text-center">
+                    <h3 class="card-title ">Kuraikoo <a href="./Kuraikoo" class="mx-2"><i class="bi bi-image" style="color: #E51A1A;"></i></a></h3>
+                    <p class="card-text">Erstellt am: 1. Dezember 2023 21:19</p>
+                </div>
+                <div class="row m-2">
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/35184d2a-a807-47b4-a34e-a96b6de3d6f0" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/Kuraikoo/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                Kuraikoo
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/3c729c1f-51a0-4f2a-9bc1-0f858670f727" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/Matsschummels/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                Matsschummels
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/fd7635b3-f46a-4798-a968-fd0e438b84d8" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/KoneyMC/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                KoneyMC
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/d354ccad-4a67-4704-b74a-d076bc5fcf0c" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/Sasa_Einhorn/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                Sasa_Einhorn
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+                
+            </div>
+    
+            <div class="card mb-3" style="border-color: #FFFF00;">
+                <div class="card-body align-self-center text-center">
+                    <h3 class="card-title ">Imperium <a href="./Imperium" class="mx-2"><i class="bi bi-image" style="color: #FFFF00;"></i></a></h3>
+                    <p class="card-text">Erstellt am: 1. Dezember 2023 22:42</p>
+                </div>
+                <div class="row m-2">
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/ffeed674-d315-4fb9-abaa-c050b3dc4f44" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/YAYO1208/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                YAYO1208
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/1957e457-28de-4c67-9c93-69b2fcd5d317" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/Warsteiner1753/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                Warsteiner1753
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+                
+            </div>
+    
+            <div class="card mb-3" style="border-color: #0000FF;">
+                <div class="card-body align-self-center text-center">
+                    <h3 class="card-title ">Minotik <a href="./Minotik" class="mx-2"><i class="bi bi-image" style="color: #0000FF;"></i></a></h3>
+                    <p class="card-text">Erstellt am: 1. Dezember 2023 22:57</p>
+                </div>
+                <div class="row m-2">
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/225e0847-bca5-43aa-9c1f-367b80316db9" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/Minotik/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                Minotik
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/a783235f-6ecf-4871-b2fa-ec3d0af9ee0b" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/Pexa/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                Pexa
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+                
+            </div>
+    
+            <div class="card mb-3" style="border-color: #FF7000;">
+                <div class="card-body align-self-center text-center">
+                    <h3 class="card-title ">Antiskelettpetition <a href="./Antiskelettpetition" class="mx-2"><i class="bi bi-image" style="color: #FF7000;"></i></a></h3>
+                    <p class="card-text">Erstellt am: 1. Dezember 2023 23:41</p>
+                </div>
+                <div class="row m-2">
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/408e55ce-dfc1-49de-b9fb-c64ec883dd16" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/Tok3nnn/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                Tok3nnn
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/e6757784-4673-4888-9933-281f83c41ff3" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/Lukas_Lion55/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                Lukas_Lion55
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/d354ccad-4a67-4704-b74a-d076bc5fcf0c" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/Sasa_Einhorn/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                Sasa_Einhorn
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/9d0f80a3-6e07-4bfb-8d87-5ec7587fcf54" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/Simon_Dragon/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                Simon_Dragon
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+
+                
+            </div>
+    
+            <div class="card mb-3" style="border-color: #FFFF00;">
+                <div class="card-body align-self-center text-center">
+                    <h3 class="card-title ">DieProfisDigga <a href="./DieProfisDigga" class="mx-2"><i class="bi bi-image" style="color: #FFFF00;"></i></a></h3>
+                    <p class="card-text">Erstellt am: 2. Dezember 2023 00:07</p>
+                </div>
+                <div class="row m-2">
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/da0b4afd-9d55-4f73-8d2f-d3d69727f615" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/st_or_ch_china/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                st_or_ch_china
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/8e0d5e4b-7f96-4ca6-907e-2521ac46d91b" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/ylzirq/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                ylzirq
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/e9303db7-a0ba-4651-8e83-2875ddf8d605" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/Jo3l4l/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                Jo3l4l
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/b0301f87-39c4-437c-8395-217845ddd3b8" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/rookie1337/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                rookie1337
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+                
+            </div>
+    
+            <div class="card mb-3" style="border-color: #FFFF00;">
+                <div class="card-body align-self-center text-center">
+                    <h3 class="card-title ">Statox <a href="./Statox" class="mx-2"><i class="bi bi-image" style="color: #FFFF00;"></i></a></h3>
+                    <p class="card-text">Erstellt am: 2. Dezember 2023 02:54</p>
+                </div>
+                <div class="row m-2">
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/8ddfd09b-dfe9-423f-9c06-98a98d000c78" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/Statox/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                Statox
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+                
+            </div>
+    
+            <div class="card mb-3" style="border-color: #FFFF00;">
+                <div class="card-body align-self-center text-center">
+                    <h3 class="card-title ">bySletix <a href="./bySletix" class="mx-2"><i class="bi bi-image" style="color: #FFFF00;"></i></a></h3>
+                    <p class="card-text">Erstellt am: 2. Dezember 2023 03:34</p>
+                </div>
+                <div class="row m-2">
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/75008c42-f29d-42bb-a956-a63200b0c46b" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/bySletix/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                bySletix
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/bda5e939-7161-4df4-8c78-7b1c3199e5d9" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/bySletix2/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                bySletix2
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/d977c832-7207-474c-8bba-515c1fd619e8" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/_Texiz/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                _Texiz
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+
+                
+            </div>
+    
+            <div class="card mb-3" style="border-color: #FFFF00;">
+                <div class="card-body align-self-center text-center">
+                    <h3 class="card-title ">DIEHÖLE <a href="./DIEH%C3%96LE" class="mx-2"><i class="bi bi-image" style="color: #FFFF00;"></i></a></h3>
+                    <p class="card-text">Erstellt am: 2. Dezember 2023 13:43</p>
+                </div>
+                <div class="row m-2">
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/c7095b87-404f-4457-8c93-f7cf99b74a4c" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/HerrMika/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                HerrMika
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+                
+            </div>
+    
+            <div class="card mb-3" style="border-color: #FFFF00;">
+                <div class="card-body align-self-center text-center">
+                    <h3 class="card-title ">kagosami <a href="./kagosami" class="mx-2"><i class="bi bi-image" style="color: #FFFF00;"></i></a></h3>
+                    <p class="card-text">Erstellt am: 3. Dezember 2023 15:48</p>
+                </div>
+                <div class="row m-2">
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/6c84f96c-71f4-4ccb-8de0-780401c8b23a" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/Leanlu/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                Leanlu
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+                
+            </div>
+    
+            <div class="card mb-3" style="border-color: #FFFF00;">
+                <div class="card-body align-self-center text-center">
+                    <h3 class="card-title ">_Bloggy <a href="./_Bloggy" class="mx-2"><i class="bi bi-image" style="color: #FFFF00;"></i></a></h3>
+                    <p class="card-text">Erstellt am: 3. Dezember 2023 16:01</p>
+                </div>
+                <div class="row m-2">
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/e42990d3-a887-42d0-b619-e84c73124b55" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/_Bloggy/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                _Bloggy
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+                
+            </div>
+    
+            <div class="card mb-3" style="border-color: #FFFF00;">
+                <div class="card-body align-self-center text-center">
+                    <h3 class="card-title ">_Texiz <a href="./_Texiz" class="mx-2"><i class="bi bi-image" style="color: #FFFF00;"></i></a></h3>
+                    <p class="card-text">Erstellt am: 5. Dezember 2023 11:37</p>
+                </div>
+                <div class="row m-2">
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/d977c832-7207-474c-8bba-515c1fd619e8" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/_Texiz/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                _Texiz
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/75008c42-f29d-42bb-a956-a63200b0c46b" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/bySletix/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                bySletix
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+                
+            </div>
+    
+            <div class="card mb-3" style="border-color: #FFFF00;">
+                <div class="card-body align-self-center text-center">
+                    <h3 class="card-title ">ProfiRaid <a href="./ProfiRaid" class="mx-2"><i class="bi bi-image" style="color: #FFFF00;"></i></a></h3>
+                    <p class="card-text">Erstellt am: 5. Dezember 2023 22:34</p>
+                </div>
+                <div class="row m-2">
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/b0301f87-39c4-437c-8395-217845ddd3b8" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/rookie1337/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                rookie1337
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/da0b4afd-9d55-4f73-8d2f-d3d69727f615" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/st_or_ch_china/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                st_or_ch_china
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/e9303db7-a0ba-4651-8e83-2875ddf8d605" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/Jo3l4l/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                Jo3l4l
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/8e0d5e4b-7f96-4ca6-907e-2521ac46d91b" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/ylzirq/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                ylzirq
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+                
+            </div>
+    
+            <div class="card mb-3" style="border-color: #FFFF00;">
+                <div class="card-body align-self-center text-center">
+                    <h3 class="card-title ">CreeperFarm2.0 <a href="./CreeperFarm2.0" class="mx-2"><i class="bi bi-image" style="color: #FFFF00;"></i></a></h3>
+                    <p class="card-text">Erstellt am: 5. Dezember 2023 22:35</p>
+                </div>
+                <div class="row m-2">
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/8e0d5e4b-7f96-4ca6-907e-2521ac46d91b" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/ylzirq/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                ylzirq
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/b0301f87-39c4-437c-8395-217845ddd3b8" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/rookie1337/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                rookie1337
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/e9303db7-a0ba-4651-8e83-2875ddf8d605" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/Jo3l4l/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                Jo3l4l
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/da0b4afd-9d55-4f73-8d2f-d3d69727f615" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/st_or_ch_china/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                st_or_ch_china
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+                
+            </div>
+    
+            <div class="card mb-3" style="border-color: #FFFF00;">
+                <div class="card-body align-self-center text-center">
+                    <h3 class="card-title ">Frozen <a href="./Frozen" class="mx-2"><i class="bi bi-image" style="color: #FFFF00;"></i></a></h3>
+                    <p class="card-text">Erstellt am: 9. Dezember 2023 13:18</p>
+                </div>
+                <div class="row m-2">
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/646fe025-c6c7-4f2d-8153-3072ab42c4ce" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/FrozenSpeed/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                FrozenSpeed
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+                
+            </div>
+    
+            <div class="card mb-3" style="border-color: #FFFF00;">
+                <div class="card-body align-self-center text-center">
+                    <h3 class="card-title ">sus <a href="./sus" class="mx-2"><i class="bi bi-image" style="color: #FFFF00;"></i></a></h3>
+                    <p class="card-text">Erstellt am: 10. Dezember 2023 16:38</p>
+                </div>
+                <div class="row m-2">
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/3448359b-b85b-41e0-9967-8ad7126f66e0" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/Ozelot_117/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                Ozelot_117
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+                
+            </div>
+    
+            <div class="card mb-3" style="border-color: #FFFF00;">
+                <div class="card-body align-self-center text-center">
+                    <h3 class="card-title ">DieProfisDiggga <a href="./DieProfisDiggga" class="mx-2"><i class="bi bi-image" style="color: #FFFF00;"></i></a></h3>
+                    <p class="card-text">Erstellt am: 11. Dezember 2023 00:01</p>
+                </div>
+                <div class="row m-2">
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/e9303db7-a0ba-4651-8e83-2875ddf8d605" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/Jo3l4l/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                Jo3l4l
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/b0301f87-39c4-437c-8395-217845ddd3b8" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/rookie1337/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                rookie1337
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/da0b4afd-9d55-4f73-8d2f-d3d69727f615" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/st_or_ch_china/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                st_or_ch_china
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+                
+            </div>
+    
+            <div class="card mb-3" style="border-color: #FFFF00;">
+                <div class="card-body align-self-center text-center">
+                    <h3 class="card-title ">Farm <a href="./Farm" class="mx-2"><i class="bi bi-image" style="color: #FFFF00;"></i></a></h3>
+                    <p class="card-text">Erstellt am: 12. Dezember 2023 17:10</p>
+                </div>
+                <div class="row m-2">
+                    
+                        
+                            <div class="col-md-auto col-lg-auto col-xl-auto">
+                                <div class="card border" style="padding: 0 !important;">
+                                    <div class="d-flex justify-content-between">
+                                        <img src="./Nimpor S2 - Teams_files/3c729c1f-51a0-4f2a-9bc1-0f858670f727" class="rounded img-fluid" alt="Avatar" style="height: 3rem; width: 3rem;">
+                                        <a href="https://nimpor.eu/player/Matsschummels/" class="
+                                        link-underline link-underline-opacity-0 disabled h6 m-2 align-self-center
+                                        
+                                        ">
+                                                Matsschummels
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+                
+            </div>
+                
+
+
+                
+
+
+<div class="py-2"></div>
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top mt-auto">
+    <ul class="nav col-md-4">
+        <li class="nav-item">
+            <p class="nav-link text-muted px-0">Nimpor S2, by</p>
+        </li>
+        <li>
+            <a href="https://github.com/Tok3nexe" class="nav-link text-muted px-1" target="_blank">Tok3n</a>
+        </li>
+        <li class="nav-item">
+            <p class="nav-link text-muted px-0">&amp;</p>
+        </li>
+        <li>
+            <a href="https://github.com/K0ney" class="nav-link px-2 text-muted px-1" target="_blank">KoneyMC</a>
+        </li>
+
+    </ul>
+
+
+    <a href="./index.html" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+        
+        <img class="" src="./Nimpor S2 - Teams_files/white(1).png" style="max-width: 25%; height: auto;">
+        
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+        
+            <li class="nav-item">
+                <a href="./index.html" class="nav-link px-2 text-muted">Home</a>
+            </li>
+        
+            <li class="nav-item">
+                <a href="./legend.html" class="nav-link px-2 text-muted">Legende</a>
+            </li>
+        
+            <li class="nav-item">
+                <a href="./ranking.html" class="nav-link px-2 text-muted">Ranking</a>
+            </li>
+        
+            <li class="nav-item">
+                <a href="./playerlist.html" class="nav-link px-2 text-muted">Spielerliste</a>
+            </li>
+        
+            <li class="nav-item">
+                <a href="./teams.html" class="nav-link px-2 text-muted">Teams</a>
+            </li>
+        
+            <li class="nav-item">
+                <a href="https://nimpor.eu/map/" class="nav-link px-2 text-muted disabled" target="_blank">Map</a>
+            </li>
+        
+
+        
+            <li class="nav-item">
+                <a href="https://nimpor.eu/login/" class="nav-link px-2 text-muted disabled">Login</a>
+            </li>
+        
+    </ul>
+</footer>
+
+
+        </div>
+    <script src="./Nimpor S2 - Teams_files/bootstrap.bundle.min.js.Download"></script>
+    
+
+</body></html>
